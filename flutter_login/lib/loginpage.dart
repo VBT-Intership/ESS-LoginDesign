@@ -29,7 +29,8 @@ class _LoginViewState extends State<LoginView> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
+        body: Container(
+          alignment: Alignment.center,
           child: ListView(
             padding: const EdgeInsets.all(32.0),
             children: [
@@ -40,10 +41,40 @@ class _LoginViewState extends State<LoginView> {
               EmailInput(),
               PasswordInput(),
               ForgotPasswordTitle(),
+              SignInButton(),
             ],
           ),
         ),
       ),
+    );
+  }
+}
+
+class SignInButton extends StatelessWidget {
+  const SignInButton({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        RaisedButton(
+          onPressed: () {},
+          color: Colors.blue[500],
+          child: Text(
+            "Sign In",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 14.0,
+            ),
+          ),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
+        ),
+      ],
     );
   }
 }
