@@ -37,9 +37,35 @@ class _LoginViewState extends State<LoginView> {
               EmployeeLoginTitle(),
               WelcomeTitle(),
               SigninTitle(),
-              EmailInput()
+              EmailInput(),
+              PasswordInput()
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class PasswordInput extends StatelessWidget {
+  const PasswordInput({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      obscureText: true,
+      decoration: InputDecoration(
+        labelText: "Password",
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.blue[300],
+          ),
+        ),
+        labelStyle: TextStyle(
+          color: Colors.grey,
+          fontSize: 18.0,
         ),
       ),
     );
