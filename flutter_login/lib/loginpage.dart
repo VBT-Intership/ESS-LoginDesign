@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login/welcomepage.dart';
 
 class LoginView extends StatefulWidget {
   @override
@@ -61,13 +62,16 @@ class SignInButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         RaisedButton(
-          onPressed: () {},
-          color: Colors.blue[500],
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => WelcomeView()));
+          },
+          color: Colors.blue[300],
           child: Text(
             "Sign In",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 14.0,
+              fontSize: 16.0,
             ),
           ),
           shape: RoundedRectangleBorder(
