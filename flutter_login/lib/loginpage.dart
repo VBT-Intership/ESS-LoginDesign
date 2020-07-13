@@ -37,8 +37,31 @@ class _LoginViewState extends State<LoginView> {
               EmployeeLoginTitle(),
               WelcomeTitle(),
               SigninTitle(),
+              EmailInput()
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class EmailInput extends StatelessWidget {
+  const EmailInput({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: InputDecoration(
+        labelText: "Email address",
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.blue[300]),
+        ),
+        labelStyle: TextStyle(
+          color: Colors.grey,
+          fontSize: 18.0,
         ),
       ),
     );
