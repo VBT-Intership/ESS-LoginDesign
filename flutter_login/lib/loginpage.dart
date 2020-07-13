@@ -38,9 +38,31 @@ class _LoginViewState extends State<LoginView> {
               WelcomeTitle(),
               SigninTitle(),
               EmailInput(),
-              PasswordInput()
+              PasswordInput(),
+              ForgotPasswordTitle(),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class ForgotPasswordTitle extends StatelessWidget {
+  const ForgotPasswordTitle({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: Alignment.centerRight,
+      margin: const EdgeInsets.all(10),
+      child: Text(
+        "Forgot Password ?",
+        style: TextStyle(
+          color: Colors.blue,
+          fontSize: 16.0,
         ),
       ),
     );
