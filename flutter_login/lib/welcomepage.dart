@@ -3,17 +3,22 @@ import 'package:flutter/material.dart';
 class WelcomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          CircleDoneShape(),
-          SizedBox(height: 50),
-          SignInSuccessLabel(),
-          SizedBox(height: 15),
-          WelcomeLabel(),
-        ],
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          alignment: Alignment.center,
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleDoneShape(),
+              SizedBox(height: 50),
+              SignInSuccessLabel(),
+              SizedBox(height: 15),
+              WelcomeLabel(),
+            ],
+          ),
+        ),
       ),
     );
   }
