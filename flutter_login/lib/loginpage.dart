@@ -31,19 +31,22 @@ class _LoginViewState extends State<LoginView> {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-          alignment: Alignment.center,
-          child: ListView(
-            padding: const EdgeInsets.all(32.0),
-            children: [
-              HysysTitle(),
-              EmployeeLoginTitle(),
-              WelcomeTitle(),
-              SigninTitle(),
-              EmailInput(),
-              PasswordInput(),
-              ForgotPasswordTitle(),
-              SignInButton(),
-            ],
+          child: Align(
+            child: ListView(
+              padding: const EdgeInsets.all(20.0),
+              children: [
+                SizedBox(height: 70),
+                HysysTitle(),
+                EmployeeLoginTitle(),
+                WelcomeTitle(),
+                SigninTitle(),
+                SizedBox(height: 25),
+                EmailInput(),
+                PasswordInput(),
+                ForgotPasswordTitle(),
+                SignInButton(),
+              ],
+            ),
           ),
         ),
       ),
